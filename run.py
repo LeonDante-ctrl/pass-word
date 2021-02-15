@@ -51,7 +51,24 @@ def generatePassword(num):
 
     for n in range(num):
         x = random.randint(0, 94)
-        genpas += string.printable[x] # integer values only accepted
+        genpas += string.printable[x]  # integer values only accepted
 
     return genpas
 
+
+def main():
+    print('{:_^5}'.format('REMAIN SECURE WITH LEONS PASSWORD MANAGER'))
+
+    print('\n')
+
+    print('{:_^20}'.format('login'))
+
+    print('\n')
+
+    print("Key in locker username")
+
+    user_name = input().upper()
+
+    print(f"Hello {user_name}, Behold!!!, your password manager")
+
+    print('\n')
