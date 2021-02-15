@@ -32,7 +32,7 @@ def display_all_details():
 
 def check_existing_user(username):
     """
-    a function that is used to check and return all exissting accounts
+    a function that is used to check and return all existing accounts
     """
 
     return User.user_exist(username)
