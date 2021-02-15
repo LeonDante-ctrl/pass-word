@@ -36,3 +36,11 @@ def check_existing_user(username):
     """
 
     return User.user_exist(username)
+
+
+def find_user(username):
+    """
+    the function is used check details from the saved save_details
+    """
+
+    return User.find_by_username(username)
