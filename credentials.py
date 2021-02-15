@@ -20,11 +20,18 @@ class Credentials:
     @classmethod
     def display_all_details(cls):
 
-            return cls.user_detail
+        return cls.user_detail
 
     @classmethod
     def find_by_username(cls, username):
 
-         for user in cls.user_detail:
-          if user.username == username:
-             return user
+        for user in cls.user_detail:
+            if user.username == username:
+                return user
+
+    @classmethod
+    def user_exist(cls, username):
+
+        for user in cls.user_detail:
+            if user.username == username:
+                return True
