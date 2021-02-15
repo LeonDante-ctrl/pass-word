@@ -10,17 +10,17 @@ class TestCredential(unittest.TestCase):
 
     def setUp(self):
         """
-        this method runs before each test case, carries the instrctions of what is to be done
+        this method runs before each test case, carries the instructions of what is to be done
         """
 
-        self.new_password = Credential("watinguyaz")
+        self.new_password = Credential("malapa")
 
     def test_init(self):
         """
         used to test if the objects have been initialized properly
         """
 
-        self.assertEqual(self.new_password.credential_detail, "watinguyaz")
+        self.assertEqual(self.new_password.credential_detail, "malapa")
 
 
 if __name__ == '__main__':

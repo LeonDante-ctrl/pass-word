@@ -5,7 +5,7 @@ class Credential:
 
     credential_detail = []
 
-    def __init__(self,credential_detail):
+    def __init__(self, credential_detail):
 
         """
         the __init__method helps us define properties for our objects.

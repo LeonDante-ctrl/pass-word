@@ -12,7 +12,7 @@ class User:
         """
         User.user_detail.append(self)
 
-    def delete_detail():
+    def delete_detail(self):
 
         """
         the delete_detail method is used to remove objects from the user detail array
@@ -23,14 +23,13 @@ class User:
     def __init__(self, account_name, username, password, confirm_password):
 
         """
-        the __init__method helps us define properties for our objectsself.
+        the __init__method helps us define properties for our self object.
         """
 
         self.account_name = account_name
         self.username = username
-        self.password =password
+        self.password = password
         self.confirm_password = confirm_password
-
 
         """
         arguments for our __init__method will include the following.
@@ -42,15 +41,15 @@ class User:
         return cls.user_detail
 
     @classmethod
-    def find_by_username(cls,username):
+    def find_by_username(cls, username):
 
         for user in cls.user_detail:
             if user.username == username:
                 return user
 
     @classmethod
-    def user_exist(cls,username):
+    def user_exist(cls, username):
 
         for user in cls.user_detail:
             if user.username == username:
-                    return True
+                return True
