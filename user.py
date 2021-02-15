@@ -31,3 +31,26 @@ class User:
         self.password =password
         self.confirm_password = confirm_password
 
+
+        """
+        arguments for our __init__method will include the following.
+        """
+
+    @classmethod
+    def display_all_details(cls):
+
+        return cls.user_detail
+
+    @classmethod
+    def find_by_username(cls,username):
+
+        for user in cls.user_detail:
+            if user.username == username:
+                return user
+
+    @classmethod
+    def user_exist(cls,username):
+
+        for user in cls.user_detail:
+            if user.username == username:
+                    return True
