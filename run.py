@@ -44,3 +44,14 @@ def find_user(username):
     """
 
     return User.find_by_username(username)
+
+
+def generatePassword(num):
+    genpas = ''
+
+    for n in range(num):
+        x = random.randint(0, 94)
+        genpas += string.printable[x] # integer values only accepted
+
+    return genpas
+
