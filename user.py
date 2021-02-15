@@ -3,9 +3,9 @@ class User:
     Class that will generate new instances of users
     """
 
-    user_detail = [] #empty array
-    def __init__(self,login_username):
+    user_detail = []  # empty array
 
+    def __init__(self, login_username):
         """
         the __init__method helps us define properties for our object self.
         """
