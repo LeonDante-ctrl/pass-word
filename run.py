@@ -1,7 +1,7 @@
 from getpass import getpass
+from typing import Optional
 
 from user import User
-from credentials import Credential
 import random
 import string
 
@@ -11,6 +11,11 @@ dash = '-' * 60
 def create_account(account_name, username, password, confirm_password):
     """
     function to create a new account
+    :param account_name:
+    :param username:
+    :param password:
+    :param confirm_password:
+    :return:
     """
 
     new_user = User(account_name, username, password, confirm_password)
@@ -107,9 +112,10 @@ def main():
 
             print("yes", "no")
             ans = input().lower()
-
+            password: Optional[str] = getpass('password:')
             if ans == 'yes':
-
+                confirm_password = getpass('confirm password:')
+                print("*********")
                 print(generatePassword(10))
 
                 save_details(create_account(account_name, username, password, confirm_password))
@@ -123,7 +129,7 @@ def main():
 
             elif ans == 'no':
 
-                password = getpass('password:')
+                password: Optional[str] = getpass('password:')
                 print("*********")
 
                 confirm_password = getpass('confirm password:')
